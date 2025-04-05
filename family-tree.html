@@ -1,279 +1,739 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Family Tree of Nagelias - NAGELIA</title>
+  <head>
+    <title>Nagelia - Family Tree Graph</title>
+    <meta
+      name="description"
+      content="Home Page of Nagelias - Family from Rajasthan and Jamshedpur"
+    />
+    <meta
+      name="keywords"
+      content="Nagelia, Jamshedpur, Marwari, Family Tree, Rajasthan"
+    />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="home.css"
+      title="wsite-theme-css"
+    />
+    <style>
+      .family-tree {
+        position: relative;
+        width: 100%;
+        min-height: 800px;
+        padding: 20px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+        touch-action: pan-x pan-y pinch-zoom;
+      }
 
-<meta name="keywords" content="Nagelia, Jamshedpur, Marwari, Family Tree, Rajasthan" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      #family-tree-container {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        min-height: 800px;
+        margin-left: -500px;
+        touch-action: none;
+      }
 
-		<meta name="google-site-verification" content="gOL8PrWR-qk2feUUJdOCjuSw6jKTzSqcCMpKEiVlCYU" />
-		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
-<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
-<link rel="stylesheet" type="text/css" href="files/main_style.css?1678922857" title="wsite-theme-css" />
+      .node {
+        cursor: pointer;
+      }
 
-<style type='text/css'>
-.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
-#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
-.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
-.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
-#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
-.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
-#wsite-title {}
-.wsite-menu-default a {}
-.wsite-menu a {}
-.wsite-image div, .wsite-caption {}
-.galleryCaptionInnerText {}
-.fancybox-title {}
-.wslide-caption-text {}
-.wsite-phone {}
-.wsite-headline,.wsite-header-section .wsite-content-title {}
-.wsite-headline-paragraph,.wsite-header-section .paragraph {}
-.wsite-button-inner {}
-.wsite-not-footer blockquote {}
-.wsite-footer blockquote {}
-.blog-header h2 a {}
-#wsite-content h2.wsite-product-title {}
-.wsite-product .wsite-product-price a {}
-@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
-#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
-.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
-.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
-#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
-.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
-#wsite-title {}
-.wsite-menu-default a {}
-.wsite-menu a {}
-.wsite-image div, .wsite-caption {}
-.galleryCaptionInnerText {}
-.fancybox-title {}
-.wslide-caption-text {}
-.wsite-phone {}
-.wsite-headline,.wsite-header-section .wsite-content-title {}
-.wsite-headline-paragraph,.wsite-header-section .paragraph {}
-.wsite-button-inner {}
-.wsite-not-footer blockquote {}
-.wsite-footer blockquote {}
-.blog-header h2 a {}
-#wsite-content h2.wsite-product-title {}
-.wsite-product .wsite-product-price a {}
-}</style>
+      .node circle {
+        fill: #fff;
+        stroke: #8b4513;
+        stroke-width: 2px;
+      }
 
-<style type='text/css'>
-.wsite-header {
-	background-image: url(uploads/1/1/3/7/11375526/background-images/background-images/382675627.jpg) !important;
-	background-position: 500 0 !important;
-}
-</style>
+      .node text {
+        font: 12px sans-serif;
+      }
 
-		<script src='files/templateArtifacts.js?1678922527'></script>
-<script>
-var STATIC_BASE = '//cdn1.editmysite.com/';
-var ASSETS_BASE = '//cdn2.editmysite.com/';
-var STYLE_PREFIX = 'wsite';
-</script>
-<script src='https://cdn2.editmysite.com/js/jquery-1.8.3.min.js'></script>
+      .link {
+        fill: none;
+        stroke: #8b4513;
+        stroke-width: 2px;
+      }
 
-<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script>
-<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">
-		function initCustomerAccountsModels() {
-					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
-_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
-})();
-		}
-		if(document.createEvent && document.addEventListener) {
-			var initEvt = document.createEvent('Event');
-			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
-			document.dispatchEvent(initEvt);
-		} else if(document.documentElement.initCustomerAccountsModels === 0){
-			document.documentElement.initCustomerAccountsModels++
-		}
-		</script>
-		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='UNSET'; </script><script>_W = _W || {};
-			_W.customerLocale = "en_US";
-			_W.storeName = null;
-			_W.isCheckoutReskin = false;
-			_W.storeCountry = "IN";
-			_W.storeCurrency = "USD";
-			_W.storeEuPrivacyPolicyUrl = "";
-			com_currentSite = "665377608676250458";
-			com_userID = "11375526";</script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
-<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
-	var IS_ARCHIVE = 1;
-	
-	function initFlyouts(){
-		initPublishedFlyoutMenus(
-			[{"id":"197744102198881424","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"661603599201327496","title":"About","url":"about.html","target":"","nav_menu":false,"nonclickable":false},{"id":"174428134916411585","title":"Ancestry","url":"ancestry.html","target":"","nav_menu":false,"nonclickable":false},{"id":"566714436629607997","title":"Family Tree","url":"family-tree.html","target":"","nav_menu":false,"nonclickable":false},{"id":"629688838310093506","title":"Events","url":"events.html","target":"","nav_menu":false,"nonclickable":false},{"id":"248272511315997786","title":"Contact","url":"contact.html","target":"","nav_menu":false,"nonclickable":false},{"id":"646240083810826209","title":"Tree Graph","url":"tree-graph.html","target":"","nav_menu":false,"nonclickable":false}],
-			"566714436629607997",
-			'',
-			'active',
-			false,
-			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
-			{}
-		)
-	}
-//-->
-</script>
-		
-		
-	</head>
-	<body class="wsite-theme-light tall-header-page  wsite-page-family-tree"><div id="top-bg"></div>
-<div id="container">
-	<div id="header-top">
-		<div id="pen"></div>
-		<table id="header">
-			<tr>
-				<td id="logo"><span class="wsite-logo">
+      .nodeCard {
+        padding: 10px;
+        border: 2px solid #8b4513;
+        border-radius: 5px;
+        background-color: rgba(255, 248, 220, 0.9);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
 
-	<a href="">
-	
-	<span id="wsite-title">NAGELIA</span>
-	
-	</a>
+      .nodeCard h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        color: #5d2906;
+      }
 
-</span></td>
-				<td id="header-right">
-					<table>
-						<tr>
-							<td class="phone-number"></td>
-							<td class="social"></td>
-						</tr>
-					</table>
-					<div class="search"></div>
-				</td>
-			</tr>
-		</table>
-	</div>
-	<div id="navigation">
-		<ul class="wsite-menu-default">
-				<li id="pg197744102198881424" class="wsite-menu-item-wrap">
-					<a
-								href="index.html"
-						class="wsite-menu-item"
-						>
-						Home
-					</a>
-					
-				</li>
-				<li id="pg661603599201327496" class="wsite-menu-item-wrap">
-					<a
-								href="about.html"
-						class="wsite-menu-item"
-						>
-						About
-					</a>
-					
-				</li>
-				<li id="pg174428134916411585" class="wsite-menu-item-wrap">
-					<a
-								href="ancestry.html"
-						class="wsite-menu-item"
-						>
-						Ancestry
-					</a>
-					
-				</li>
-				<li id="active" class="wsite-menu-item-wrap">
-					<a
-								href="family-tree.html"
-						class="wsite-menu-item"
-						>
-						Family Tree
-					</a>
-					
-				</li>
-				<li id="pg629688838310093506" class="wsite-menu-item-wrap">
-					<a
-								href="events.html"
-						class="wsite-menu-item"
-						>
-						Events
-					</a>
-					
-				</li>
-				<li id="pg248272511315997786" class="wsite-menu-item-wrap">
-					<a
-								href="contact.html"
-						class="wsite-menu-item"
-						>
-						Contact
-					</a>
-					
-				</li>
-				<li id="pg646240083810826209" class="wsite-menu-item-wrap">
-					<a
-								href="tree-graph.html"
-						class="wsite-menu-item"
-						>
-						Tree Graph
-					</a>
-					
-				</li>
-		</ul>
-		<div class="clear"></div>
-	</div>
-	<div id="main-top">
-		<div id="main-bg"></div>
-		<div id="main-bot">
-			<div id="main">
-				<div id="frame-wrapper">
-					<div id="wsite-header-wrapper">
-						<div class="wsite-header"></div>
-					</div>
-				</div>
-				<div id="content">
-					<div id="wsite-content" class="wsite-elements wsite-not-footer">
-	<div><div id="958928598713175665" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html>
-<head><script src="gdpr/gdprscript.js?buildTime=1234"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>nagelia</title>
-</head>
-<body background="/files/theme/TREE3.jpg">
-<h1 align=center><img src="files/theme/tree.gif" align=absmiddle width="50" height="46"> Nagelia Family Tree <img src="files/theme/tree.gif" align=absmiddle width="50" height="46"></h1>
-<br>
-<h2 align=center><a name="TOC"></a>
-Descendants of Shri Ram Chandra Nagelia</h2>
-<p>
-<br>
-  <a href="tree-graph.html"> Family Tree (Graphical)</a><br>
-  <a href="pafg01.html"> Descendants</a><br>
-  <a href="index2.html"> Surname List</a><br>
-  <a href="index3.html"> Name Index</a><br>
+      .nodeCard p {
+        margin: 3px 0;
+        padding: 0;
+        font-size: 12px;
+      }
 
-<br>
-</p>
-<h4>Prepared by:</h4>
-<br>
-<blockquote>
-<p>Manoj Nagelia<br>
-Baltimore, MD<br>
-USA<br>
-</p>
-</blockquote>
-<p><img align=middle src="files/theme/email.jpg"> For corrections and reporting missing information, please <a href="contact.html" >Contact Us</a></p>
-<hr>
-<p align=center>This web site produced 8 Jun 2008 by Personal Ancestral File</p>
-</body>
-</html></div>
+      /* Zoom controls */
+      .zoom-controls {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10;
+        display: flex;
+        gap: 10px;
+      }
 
+      .zoom-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #8b4513;
+        color: white;
+        border: none;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
 
+      .couple-node {
+        display: flex;
+        justify-content: center;
+      }
 
-</div>
-</div>
-					<div class="clear"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="footer">
-		Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a>
-		<div class="clear"></div>
-	</div>
-</div>
-    <div id="customer-accounts-app"></div>
-    <script src="http://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1234"></script>
+      .spouse-card {
+        background-color: #f0e4d0 !important;
+        border-color: #a0522d !important;
+      }
 
-		<script>
-document.getElementById("weebly-footer-signup-container").style.visibility = "hidden";
-</script>
-	</body>
+      .marriage-link {
+        stroke: #a0522d;
+        stroke-dasharray: 5, 5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>NAGELIA</h1>
+      </div>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="ancestry.html">Ancestry</a>
+        <a href="family-tree.html" class="active">Family Tree</a>
+        <!-- <a href="events.html">Events</a> -->
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="content-area family-tree">
+        <h2>Our Family Tree</h2>
+        <div id="family-tree-container"></div>
+        <div class="zoom-controls">
+          <button class="zoom-btn" id="zoom-in">+</button>
+          <button class="zoom-btn" id="zoom-out">−</button>
+          <button class="zoom-btn" id="zoom-reset">↺</button>
+        </div>
+      </div>
+      <div class="footer">
+        <p>
+          © 2025 Nagelia Family History | Preserving Our Heritage for Future
+          Generations
+        </p>
+      </div>
+    </div>
+    <script src="https://cdn2.editmysite.com/js/jquery-1.8.3.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+      // Original family data
+      var familyData = {
+        family: {
+          name: "Ramchandra Nagelia",
+          born: "Kalukabas, INDIA",
+          deceased: "Kalukabas, INDIA",
+          children: [
+            {
+              name: "Shivprasad Nagelia",
+              born: "Kalukabas, INDIA",
+              deceased: "Jamshedpur, INDIA",
+              children: [
+                {
+                  name: "Nandlal Nagelia",
+                  children: [
+                    {
+                      name: "Lakshminarayan Nagelia",
+                      spouse: "Ginni Devi Nagelia",
+                      children: [
+                        {
+                          name: "Surendra Nagelia",
+                          spouse: "Kaushalya Nagelia",
+                          children: [
+                            {
+                              name: "Santosh Nagelia",
+                              spouse: "Anita Nagelia",
+                              children: [
+                                { name: "Paridhi Nagelia" },
+                                { name: "Keshav Nagelia" },
+                              ],
+                            },
+                            { name: "Minakshi Agarwal" },
+                            { name: "Jyoti Agarwal" },
+                            {
+                              name: "Suraj Nagelia",
+                              spouse: "Karishma Nagelia",
+                              children: [{ name: "Shreyansh Nagelia" }],
+                            },
+                          ],
+                        },
+                        {
+                          name: "Kailash Nagelia",
+                          spouse: "Kiran Nagelia",
+                          children: [
+                            { name: "Suruchi Agarwalla" },
+                            { name: "Kanak Nagelia" },
+                            { name: "Swati Nagelia" },
+                            { name: "Harshvardhan Nagelia" },
+                          ],
+                        },
+                        {
+                          name: "Kanhaiya Nagelia",
+                          spouse: "Nutan Nagelia",
+                          children: [
+                            { name: "Nikhil Nagelia" },
+                            { name: "Karishma Nagelia" },
+                          ],
+                        },
+                        {
+                          name: "Dwarka Nagelia",
+                          spouse: "Lipika Nagelia",
+                          children: [
+                            { name: "Pratik Nagelia" },
+                            { name: "Siddhant Nagelia" },
+                          ],
+                        },
+                        {
+                          name: "Nirmal Nagelia",
+                          spouse: "Renu Nagelia",
+                          children: [
+                            { name: "Namrata Nagelia" },
+                            { name: "Nimish Nagelia" },
+                          ],
+                        },
+                        {
+                          name: "Dinesh Nagelia",
+                          spouse: "Sunita Nagelia",
+                          children: [
+                            { name: "Rashi Nagelia" },
+                            { name: "Nishi Nagelia" },
+                            { name: "Sarthak Nagelia" },
+                          ],
+                        },
+                        {
+                          name: "Manoj Nagelia",
+                          spouse: "Suman Nagelia",
+                          children: [
+                            { name: "Naman Nagelia" },
+                            { name: "Manas Nagelia" },
+                          ],
+                        },
+                        {
+                          name: "Mamta Khirwal",
+                        },
+                      ],
+                    },
+                    {
+                      name: "Shivnarayan Nagelia",
+                      children: [
+                        {
+                          name: "Ramawtar Nagelia",
+                          children: [
+                            {
+                              name: "Sagar Nagelia",
+                              children: [
+                                {
+                                  name: "Anubhav Nagelia",
+                                },
+                              ],
+                            },
+                            {
+                              name: "Mahabeer Nagelia",
+                              children: [
+                                {
+                                  name: "Rajan Nagelia",
+                                },
+                                {
+                                  name: "Vikas Nagelia",
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          name: "Jagdeesh Nagelia",
+                          children: [
+                            {
+                              name: "Sawar Nagelia",
+                              children: [
+                                { name: "Nitin Nagelia" },
+                                { name: "Ankit Nagelia" },
+                              ],
+                            },
+                            {
+                              name: "Kunj Nagelia",
+                              children: [
+                                { name: "Piyush Nagelia" },
+                                { name: "Vinit Nagelia" },
+                              ],
+                            },
+                            {
+                              name: "Saligram Nagelia",
+                              children: [{ name: "Bhola Nagelia" }],
+                            },
+                            {
+                              name: "Dinesh Nagelia",
+                              children: [{ name: "Devang Nagelia" }],
+                            },
+                            {
+                              name: "Hari Nagelia",
+                              children: [{ name: "Krishank Nagelia" }],
+                            },
+                            {
+                              name: "Purushotam Nagelia",
+                            },
+                            {
+                              name: "Pawan Nagelia",
+                              children: [{ name: "Raunit Nagelia" }],
+                            },
+                          ],
+                        },
+                        {
+                          name: "Bajrang Nagelia",
+                          children: [
+                            {
+                              name: "Nagendra Nagelia",
+                              children: [{ name: "Animesh Nagelia" }],
+                            },
+                            {
+                              name: "Basudev Nagelia",
+                              children: [
+                                { name: "Kaushal Nagelia" },
+                                { name: "Lavesh Nagelia" },
+                              ],
+                            },
+                            {
+                              name: "Sameer Nagelia",
+                              children: [{ name: "Dev Nagelia" }],
+                            },
+                          ],
+                        },
+                        {
+                          name: "Murari Nagelia",
+                          children: [
+                            { name: "Amar Nagelia" },
+                            { name: "Amit Nagelia" },
+                          ],
+                        },
+                        {
+                          name: "Omprakash Nagelia",
+                          children: [
+                            { name: "Sharad Nagelia" },
+                            { name: "Kapil Nagelia" },
+                          ],
+                        },
+                      ],
+                    },
+                    {
+                      name: "Bansidhar Nagelia",
+                      children: [
+                        {
+                          name: "Murlidhar Nagelia",
+                          children: [
+                            {
+                              name: "Dharamchand Nagelia",
+                              children: [
+                                { name: "Vaibhav Nagelia" },
+                                { name: "Raghav Nagelia" },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          name: "Kalidas Nagelia",
+                          children: [
+                            {
+                              name: "Govind Nagelia",
+                              children: [{ name: "Vatsal Nagelia" }],
+                            },
+                          ],
+                        },
+                        {
+                          name: "Matadin Nagelia",
+                          children: [
+                            { name: "Abhisekh Nagelia" },
+                            { name: "Abhimanyu Nagelia" },
+                          ],
+                        },
+                        {
+                          name: "Chandi Nagelia",
+                          children: [
+                            {
+                              name: "Suman Nagelia",
+                              children: [
+                                { name: "Akshita Nagelia" },
+                                { name: "Siddhant Nagelia" },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          name: "Ambika Nagelia",
+                          children: [{ name: "Divya Nagelia" }],
+                        },
+                      ],
+                    },
+                    {
+                      name: "Nathulal Nagelia",
+                      children: [
+                        {
+                          name: "Durga Nagelia",
+                          children: [
+                            {
+                              name: "Rajesh Nagelia",
+                            },
+                            {
+                              name: "Kishore Nagelia",
+                              children: [
+                                { name: "Gokul Nagelia" },
+                                { name: "Bharat Nagelia" },
+                              ],
+                            },
+                            {
+                              name: "Ashok Nagelia",
+                              children: [
+                                { name: "Rahul Nagelia" },
+                                { name: "Abhey Nagelia" },
+                              ],
+                            },
+                            {
+                              name: "Kamal Nagelia",
+                            },
+                          ],
+                        },
+                        {
+                          name: "Radheshyam Nagelia",
+                          children: [
+                            { name: "Ajay Nagelia" },
+                            { name: "Bijay Nagelia" },
+                          ],
+                        },
+                        {
+                          name: "Shyamsundar Nagelia",
+                          children: [
+                            { name: "Tejprakash Nagelia" },
+                            { name: "Deepak Nagelia" },
+                          ],
+                        },
+                        {
+                          name: "Suresh Nagelia",
+                          children: [
+                            { name: "Shambhu Nagelia" },
+                            { name: "Gaurav Nagelia" },
+                          ],
+                        },
+                        {
+                          name: "Madhusudan Nagelia",
+                          children: [
+                            { name: "Mayank Nagelia" },
+                            { name: "Nitesh Nagelia" },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              name: "Badriprasad Nagelia",
+              children: [{ name: "Ramgopal Nagelia" }],
+            },
+            {
+              name: "Bakshiprasad Nagelia",
+              children: [
+                {
+                  name: "Jainarayan Nagelia",
+                  children: [
+                    {
+                      name: "Madanlal Nagelia",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      };
+
+      // Convert to D3 hierarchy format
+      function convertToD3Format(data) {
+        // Start with the root
+        let root = {
+          name: data.family.name,
+          born: data.family.born,
+          deceased: data.family.deceased,
+          children: [],
+        };
+
+        // Add children
+        if (data.family.children && data.family.children.length > 0) {
+          processChildren(data.family.children, root);
+        }
+
+        return root;
+      }
+
+      function processChildren(children, parent) {
+        children.forEach((child) => {
+          let newChild = {
+            name: child.name,
+            born: child.born,
+            deceased: child.deceased,
+            spouse: child.spouse,
+          };
+
+          if (!parent.children) {
+            parent.children = [];
+          }
+
+          parent.children.push(newChild);
+
+          if (child.children && child.children.length > 0) {
+            processChildren(child.children, newChild);
+          }
+        });
+      }
+
+      // Convert data to D3 format
+      const treeData = convertToD3Format(familyData);
+
+      $(document).ready(function () {
+        // Set the dimensions and margins
+        const margin = { top: 20, right: 120, bottom: 30, left: 120 },
+          width = 2000 - margin.left - margin.right, // Increased from 1500 to 2000
+          height = 2000 - margin.top - margin.bottom; // Increased from 800 to 1200
+
+        // Append the svg object to the div
+        const svg = d3
+          .select("#family-tree-container")
+          .append("svg")
+          .attr("width", width + margin.right + margin.left)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr(
+            "transform",
+            "translate(" + margin.left + "," + margin.top + ")"
+          );
+
+        let i = 0,
+          duration = 750,
+          root;
+
+        // Declares a tree layout and assigns the size
+        const treemap = d3.tree().size([height, width]);
+
+        // Create root node from treeData
+        root = d3.hierarchy(treeData, function (d) {
+          return d.children;
+        });
+        root.x0 = height / 2;
+        root.y0 = 0;
+
+        // Collapse after the second level
+        //root.children.forEach(collapse);
+
+        update(root);
+
+        // Zoom functionality using d3's zoom behavior
+        const zoom = d3.zoom().scaleExtent([0.5, 2]).on("zoom", zoomed);
+
+        // Apply zoom behavior to the SVG
+        d3.select("#family-tree-container svg").call(zoom);
+
+        function zoomed() {
+          svg.attr("transform", d3.event.transform);
+        }
+
+        // Zoom controls
+        d3.select("#zoom-in").on("click", function () {
+          d3.select("#family-tree-container svg")
+            .transition()
+            .call(zoom.scaleBy, 1.2);
+        });
+
+        d3.select("#zoom-out").on("click", function () {
+          d3.select("#family-tree-container svg")
+            .transition()
+            .call(zoom.scaleBy, 0.8);
+        });
+
+        d3.select("#zoom-reset").on("click", function () {
+          d3.select("#family-tree-container svg")
+            .transition()
+            .call(zoom.transform, d3.zoomIdentity);
+        });
+
+        // Collapse function
+        function collapse(d) {
+          if (d.children) {
+            d._children = d.children;
+            d._children.forEach(collapse);
+            d.children = null;
+          }
+        }
+
+        function update(source) {
+          // Assigns the x and y position for the nodes
+          const treeData = treemap(root);
+
+          // Compute the new tree layout
+          const nodes = treeData.descendants(),
+            links = treeData.descendants().slice(1);
+
+          // Update the node spacing in the update function
+          nodes.forEach(function (d) {
+            d.y = d.depth * 250; // Increased from 250 to 300 for more horizontal space
+            d.x = d.x * 3; // Add 20% more vertical space between nodes
+          });
+
+          // ****************** Nodes section ***************************
+
+          // Update the nodes...
+          const node = svg.selectAll("g.node").data(nodes, function (d) {
+            return d.id || (d.id = ++i);
+          });
+
+          // Enter any new nodes at the parent's previous position
+          const nodeEnter = node
+            .enter()
+            .append("g")
+            .attr("class", "node")
+            .attr("transform", function (d) {
+              return "translate(" + source.y0 + "," + source.x0 + ")";
+            });
+
+          // Add background rect for node text
+          // Replace the nodeEnter append foreignObject part with this:
+          nodeEnter
+            .append("foreignObject")
+            .attr("width", 200) // Increased width
+            .attr("height", function (d) {
+              let height = 40;
+              if (d.data.spouse) height += 30;
+              return height;
+            })
+            .attr("x", -100) // Center horizontally
+            .attr("y", function (d) {
+              let height = 40;
+              if (d.data.spouse) height += 30;
+              return -height / 2;
+            })
+            .append("xhtml:div")
+            .attr("class", "nodeCard")
+            .html(function (d) {
+              let html = `<h3>${d.data.name}</h3>`;
+              if (d.data.spouse) {
+                html += `<div class="spouse-info">♥ ${d.data.spouse}</div>`;
+              }
+              return html;
+            });
+
+          // UPDATE
+          const nodeUpdate = nodeEnter.merge(node);
+
+          // Transition to the proper position for the node
+          nodeUpdate
+            .transition()
+            .duration(duration)
+            .attr("transform", function (d) {
+              return "translate(" + d.y + "," + d.x + ")";
+            });
+
+          // Remove any exiting nodes
+          const nodeExit = node
+            .exit()
+            .transition()
+            .duration(duration)
+            .attr("transform", function (d) {
+              return "translate(" + source.y + "," + source.x + ")";
+            })
+            .remove();
+
+          // ****************** links section ***************************
+
+          // Update the links...
+          const link = svg.selectAll("path.link").data(links, function (d) {
+            return d.id;
+          });
+
+          // Enter any new links at the parent's previous position
+          const linkEnter = link
+            .enter()
+            .insert("path", "g")
+            .attr("class", "link")
+            .attr("d", function (d) {
+              const o = { x: source.x0, y: source.y0 };
+              return diagonal(o, o);
+            });
+
+          // UPDATE
+          const linkUpdate = linkEnter.merge(link);
+
+          // Transition back to the parent element position
+          linkUpdate
+            .transition()
+            .duration(duration)
+            .attr("d", function (d) {
+              return diagonal(d, d.parent);
+            });
+
+          // Remove any exiting links
+          const linkExit = link
+            .exit()
+            .transition()
+            .duration(duration)
+            .attr("d", function (d) {
+              const o = { x: source.x, y: source.y };
+              return diagonal(o, o);
+            })
+            .remove();
+
+          // Store the old positions for transition
+          nodes.forEach(function (d) {
+            d.x0 = d.x;
+            d.y0 = d.y;
+          });
+
+          // Creates a curved (diagonal) path from parent to the child nodes
+          function diagonal(s, d) {
+            return `M ${s.y} ${s.x}
+                            C ${(s.y + d.y) / 2} ${s.x},
+                              ${(s.y + d.y) / 2} ${d.x},
+                              ${d.y} ${d.x}`;
+          }
+        }
+      });
+    </script>
+  </body>
 </html>

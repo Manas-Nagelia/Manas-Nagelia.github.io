@@ -1,251 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Nagelia Family Events - NAGELIA</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events - Nagelia Family History</title>
+    <link rel="stylesheet" href="about.css" />
+    <style>
+      /* Events-specific Styles */
+      .event-card {
+        background-color: #f2e2c9;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+        padding: 25px;
+        background-image: linear-gradient(
+            0deg,
+            rgba(139, 69, 19, 0.05) 50%,
+            transparent 50%
+          ),
+          linear-gradient(90deg, rgba(139, 69, 19, 0.03), rgba(139, 69, 19, 0.03));
+        background-size: 50px 50px;
+      }
 
-<meta name="keywords" content="Nagelia, Jamshedpur, Marwari, Family Tree, Rajasthan" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      .event-card:before, .event-card:after {
+        content: "";
+        position: absolute;
+        height: 10px;
+        left: 10px;
+        right: 10px;
+        background-color: #e6c9a8;
+        opacity: 0.5;
+      }
 
-		<meta name="google-site-verification" content="gOL8PrWR-qk2feUUJdOCjuSw6jKTzSqcCMpKEiVlCYU" />
-		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/sites.css?buildTime=1234" />
-<link rel="stylesheet" type="text/css" href="http://cdn2.editmysite.com/css/old/fancybox.css?1234" />
-<link rel="stylesheet" type="text/css" href="files/main_style.css?1678922857" title="wsite-theme-css" />
+      .event-card:before {
+        top: 0;
+        border-radius: 0 0 50% 50%;
+      }
 
-<style type='text/css'>
-.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
-#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
-.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
-.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
-#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
-.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
-#wsite-title {}
-.wsite-menu-default a {}
-.wsite-menu a {}
-.wsite-image div, .wsite-caption {}
-.galleryCaptionInnerText {}
-.fancybox-title {}
-.wslide-caption-text {}
-.wsite-phone {}
-.wsite-headline,.wsite-header-section .wsite-content-title {}
-.wsite-headline-paragraph,.wsite-header-section .paragraph {}
-.wsite-button-inner {}
-.wsite-not-footer blockquote {}
-.wsite-footer blockquote {}
-.blog-header h2 a {}
-#wsite-content h2.wsite-product-title {}
-.wsite-product .wsite-product-price a {}
-@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
-#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
-.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
-.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
-#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
-.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
-#wsite-title {}
-.wsite-menu-default a {}
-.wsite-menu a {}
-.wsite-image div, .wsite-caption {}
-.galleryCaptionInnerText {}
-.fancybox-title {}
-.wslide-caption-text {}
-.wsite-phone {}
-.wsite-headline,.wsite-header-section .wsite-content-title {}
-.wsite-headline-paragraph,.wsite-header-section .paragraph {}
-.wsite-button-inner {}
-.wsite-not-footer blockquote {}
-.wsite-footer blockquote {}
-.blog-header h2 a {}
-#wsite-content h2.wsite-product-title {}
-.wsite-product .wsite-product-price a {}
-}</style>
+      .event-card:after {
+        bottom: 0;
+        border-radius: 50% 50% 0 0;
+      }
 
-<style type='text/css'>
-.wsite-header {
-	background-image: url(uploads/1/1/3/7/11375526/background-images/background-images/382675627.jpg) !important;
-	background-position: 500 0 !important;
-}
-</style>
+      .event-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid rgba(139, 69, 19, 0.2);
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+      }
 
-		<script src='files/templateArtifacts.js?1678922527'></script>
-<script>
-var STATIC_BASE = '//cdn1.editmysite.com/';
-var ASSETS_BASE = '//cdn2.editmysite.com/';
-var STYLE_PREFIX = 'wsite';
-</script>
-<script src='https://cdn2.editmysite.com/js/jquery-1.8.3.min.js'></script>
+      .event-title {
+        color: #5d2906;
+        font-size: 1.8em;
+        margin: 0;
+        position: relative;
+      }
 
-<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script>
-<script src="http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"></script><script type="text/javascript">
-		function initCustomerAccountsModels() {
-					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
-_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
-})();
-		}
-		if(document.createEvent && document.addEventListener) {
-			var initEvt = document.createEvent('Event');
-			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
-			document.dispatchEvent(initEvt);
-		} else if(document.documentElement.initCustomerAccountsModels === 0){
-			document.documentElement.initCustomerAccountsModels++
-		}
-		</script>
-		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='UNSET'; </script><script>_W = _W || {};
-			_W.customerLocale = "en_US";
-			_W.storeName = null;
-			_W.isCheckoutReskin = false;
-			_W.storeCountry = "IN";
-			_W.storeCurrency = "USD";
-			_W.storeEuPrivacyPolicyUrl = "";
-			com_currentSite = "665377608676250458";
-			com_userID = "11375526";</script><script type="text/javascript">_W.configDomain = "www.weebly.com";</script><script>_W.relinquish && _W.relinquish()</script>
-<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
-	var IS_ARCHIVE = 1;
-	
-	function initFlyouts(){
-		initPublishedFlyoutMenus(
-			[{"id":"197744102198881424","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"661603599201327496","title":"About","url":"about.html","target":"","nav_menu":false,"nonclickable":false},{"id":"174428134916411585","title":"Ancestry","url":"ancestry.html","target":"","nav_menu":false,"nonclickable":false},{"id":"566714436629607997","title":"Family Tree","url":"family-tree.html","target":"","nav_menu":false,"nonclickable":false},{"id":"629688838310093506","title":"Events","url":"events.html","target":"","nav_menu":false,"nonclickable":false},{"id":"248272511315997786","title":"Contact","url":"contact.html","target":"","nav_menu":false,"nonclickable":false},{"id":"646240083810826209","title":"Tree Graph","url":"tree-graph.html","target":"","nav_menu":false,"nonclickable":false}],
-			"629688838310093506",
-			'',
-			'active',
-			false,
-			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
-			{}
-		)
-	}
-//-->
-</script>
-		
-		
-	</head>
-	<body class="wsite-theme-light tall-header-page  wsite-page-events"><div id="top-bg"></div>
-<div id="container">
-	<div id="header-top">
-		<div id="pen"></div>
-		<table id="header">
-			<tr>
-				<td id="logo"><span class="wsite-logo">
+      .event-date {
+        background-color: #5d2906;
+        color: #e6c9a8;
+        padding: 8px 15px;
+        border-radius: 5px;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        font-weight: 600;
+        position: relative;
+      }
 
-	<a href="">
-	
-	<span id="wsite-title">NAGELIA</span>
-	
-	</a>
+      .event-date:before {
+        content: "❈";
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #8b4513;
+        font-size: 1.2em;
+      }
 
-</span></td>
-				<td id="header-right">
-					<table>
-						<tr>
-							<td class="phone-number"></td>
-							<td class="social"></td>
-						</tr>
-					</table>
-					<div class="search"></div>
-				</td>
-			</tr>
-		</table>
-	</div>
-	<div id="navigation">
-		<ul class="wsite-menu-default">
-				<li id="pg197744102198881424" class="wsite-menu-item-wrap">
-					<a
-								href="index.html"
-						class="wsite-menu-item"
-						>
-						Home
-					</a>
-					
-				</li>
-				<li id="pg661603599201327496" class="wsite-menu-item-wrap">
-					<a
-								href="about.html"
-						class="wsite-menu-item"
-						>
-						About
-					</a>
-					
-				</li>
-				<li id="pg174428134916411585" class="wsite-menu-item-wrap">
-					<a
-								href="ancestry.html"
-						class="wsite-menu-item"
-						>
-						Ancestry
-					</a>
-					
-				</li>
-				<li id="pg566714436629607997" class="wsite-menu-item-wrap">
-					<a
-								href="family-tree.html"
-						class="wsite-menu-item"
-						>
-						Family Tree
-					</a>
-					
-				</li>
-				<li id="active" class="wsite-menu-item-wrap">
-					<a
-								href="events.html"
-						class="wsite-menu-item"
-						>
-						Events
-					</a>
-					
-				</li>
-				<li id="pg248272511315997786" class="wsite-menu-item-wrap">
-					<a
-								href="contact.html"
-						class="wsite-menu-item"
-						>
-						Contact
-					</a>
-					
-				</li>
-				<li id="pg646240083810826209" class="wsite-menu-item-wrap">
-					<a
-								href="tree-graph.html"
-						class="wsite-menu-item"
-						>
-						Tree Graph
-					</a>
-					
-				</li>
-		</ul>
-		<div class="clear"></div>
-	</div>
-	<div id="main-top">
-		<div id="main-bg"></div>
-		<div id="main-bot">
-			<div id="main">
-				<div id="frame-wrapper">
-					<div id="wsite-header-wrapper">
-						<div class="wsite-header"></div>
-					</div>
-				</div>
-				<div id="content">
-					<div id="wsite-content" class="wsite-elements wsite-not-footer">
-	<h2 class="wsite-content-title" style="text-align:center;">No family events at this time, please check back later.<br /><br /><br /><br /><br /><br /></h2>
+      .event-content {
+        display: flex;
+        gap: 25px;
+      }
 
-<div class="paragraph" style="text-align:left;"><font size="4">If you have family events to report, please <a href="contact.html">contact us</a>.</font></div>
+      .event-description {
+        flex: 1;
+      }
 
-<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
-<hr class="styled-hr" style="width:100%;"></hr>
-<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
-</div>
+      .event-image {
+        flex: 0 0 250px;
+        background-color: #8b4513;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        align-self: flex-start;
+      }
 
-					<div class="clear"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="footer">
-		Create a <a target="_top" href="http://www.weebly.com/">free web site</a> with <a target="_top" href="http://www.weebly.com/" title="free web site">Weebly</a>
-		<div class="clear"></div>
-	</div>
-</div>
-    <div id="customer-accounts-app"></div>
-    <script src="http://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1234"></script>
+      .event-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border: 3px solid #e6c9a8;
+      }
 
-		<script>
-document.getElementById("weebly-footer-signup-container").style.visibility = "hidden";
-</script>
-	</body>
+      .location-indicator {
+        display: flex;
+        align-items: center;
+        background-color: rgba(139, 69, 19, 0.1);
+        padding: 8px 15px;
+        border-radius: 5px;
+        margin-top: 15px;
+        font-style: italic;
+      }
+
+      .location-indicator:before {
+        content: "☸";
+        margin-right: 10px;
+        color: #8b4513;
+      }
+
+      .upcoming-tag {
+        position: absolute;
+        top: 20px;
+        right: -30px;
+        background-color: #f1c40f;
+        color: #5d2906;
+        padding: 5px 40px;
+        transform: rotate(45deg);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+        z-index: 1;
+      }
+
+      .event-filters {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      .filter-btn {
+        background-color: #e6c9a8;
+        border: 2px solid #8b4513;
+        color: #5d2906;
+        padding: 8px 20px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-family: "Spectral", serif;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .filter-btn:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0;
+        background-color: rgba(139, 69, 19, 0.2);
+        transition: all 0.3s ease;
+        z-index: -1;
+      }
+
+      .filter-btn:hover:before {
+        width: 100%;
+      }
+
+      .filter-btn.active {
+        background-color: #8b4513;
+        color: #e6c9a8;
+      }
+
+      .archived-section {
+        margin-top: 50px;
+      }
+
+      .archived-header {
+        text-align: center;
+        margin: 30px 0;
+        position: relative;
+      }
+
+      .archived-header h3 {
+        color: #5d2906;
+        display: inline-block;
+        font-size: 1.8em;
+        margin: 0;
+        padding: 0 20px;
+        position: relative;
+      }
+
+      .archived-header h3:before, .archived-header h3:after {
+        content: "❧";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #8b4513;
+        font-size: 0.7em;
+      }
+
+      .archived-header h3:before {
+        left: -15px;
+      }
+
+      .archived-header h3:after {
+        right: -15px;
+      }
+
+      .archived-events {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 25px;
+      }
+
+      .archive-card {
+        background-color: #f2e2c9;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+
+      .archive-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .archive-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-bottom: 3px solid #8b4513;
+      }
+
+      .archive-content {
+        padding: 20px;
+      }
+
+      .archive-title {
+        color: #5d2906;
+        font-size: 1.3em;
+        margin-top: 0;
+        margin-bottom: 10px;
+        border-bottom: 1px dashed rgba(139, 69, 19, 0.3);
+        padding-bottom: 8px;
+      }
+
+      .archive-date {
+        font-style: italic;
+        color: #8b4513;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .view-details {
+        display: inline-block;
+        margin-top: 10px;
+        color: #5d2906;
+        text-decoration: none;
+        font-weight: 600;
+        position: relative;
+      }
+
+      .view-details:after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #8b4513;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+        transform-origin: right;
+      }
+
+      .view-details:hover:after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-border"></div>
+    <div class="container">
+      <div class="header">
+        <div class="header">
+          <h1>NAGELIA</h1>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="ancestry.html">Ancestry</a>
+        <a href="family-tree.html">Family Tree</a>
+        <a href="events.html" class="active">Events</a>
+        <a href="contact.html">Contact</a>
+        <a href="tree-graph.html">Tree Graph</a>
+      </div>
+
+      <div class="content-area">
+        <div class="banner-container">
+          <img
+            src="banner.jpg"
+            alt="Rajasthan Cultural Celebration"
+            class="banner-image"
+          />
+          <div class="banner-overlay"></div>
+        </div>
+
+        <div class="section-title">
+          <h2>Family Events & Gatherings</h2>
+        </div>
+
+        <div class="event-filters">
+          <button class="filter-btn active" data-filter="all">All Events</button>
+          <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+          <button class="filter-btn" data-filter="cultural">Cultural</button>
+          <button class="filter-btn" data-filter="religious">Religious</button>
+          <button class="filter-btn" data-filter="family">Family</button>
+        </div>
+
+        <!-- Upcoming Events -->
+        <div class="event-card">
+          <div class="upcoming-tag">Upcoming</div>
+          <div class="event-header">
+            <h3 class="event-title">Annual Kalka Mata Puja</h3>
+            <div class="event-date">May 12, 2025</div>
+          </div>
+          <div class="event-content">
+            <div class="event-description">
+              <p>Join us for our annual worship of Kalka Mata, our <span class="highlight">Kul Devi</span>. This sacred ritual has been performed by the Nagelia family for generations and represents our deep connection to our ancestral heritage.</p>
+              <p>The event will include traditional prayers, offerings, and a community feast. All family members are encouraged to participate in this important spiritual gathering that honors our divine protector.</p>
+              <p>Special arrangements will be made for elderly family members to ensure their comfortable participation. Children are welcome to learn about this important family tradition.</p>
+              <div class="location-indicator">
+                Kalka Mata Temple, Kalukabas Village, Rajasthan
+              </div>
+            </div>
+            <div class="event-image">
+              <img src="kalka_mata.jpg" alt="Kalka Mata Puja Ceremony">
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-header">
+            <h3 class="event-title">Nagelia Family Reunion</h3>
+            <div class="event-date">July 15-18, 2025</div>
+          </div>
+          <div class="event-content">
+            <div class="event-description">
+              <p>Our biennial family reunion brings together Nagelia family members from across India and around the world. This four-day celebration will be filled with cultural programs, storytelling sessions, and activities that celebrate our shared heritage.</p>
+              <p>This year's reunion will feature a special exhibition on the history of the Nagelia family's migration from Nangolia to Kalukabas, and later to Jamshedpur. Family members are encouraged to bring photographs, documents, and artifacts that represent our rich history.</p>
+              <p>The gathering will conclude with a grand banquet featuring traditional Marwari cuisine and cultural performances by family members of all ages.</p>
+              <div class="location-indicator">
+                Nagelia Community Hall, Jamshedpur, Jharkhand
+              </div>
+            </div>
+            <div class="event-image">
+              <img src="ancient_temple.jpg" alt="Previous Family Reunion">
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-header">
+            <h3 class="event-title">Diwali Celebration</h3>
+            <div class="event-date">November 10, 2025</div>
+          </div>
+          <div class="event-content">
+            <div class="event-description">
+              <p>Celebrate the festival of lights with the extended Nagelia family in our annual Diwali gathering. This joyous occasion brings together family members to honor our traditions and strengthen our bonds.</p>
+              <p>The celebration will include a special Lakshmi Puja, followed by a vibrant display of fireworks and a sumptuous feast. Family members are invited to participate in decorating the venue with traditional rangolis and diyas.</p>
+              <p>As per our family tradition, we will also be contributing to charitable causes during this event, reflecting our commitment to community service and giving back.</p>
+              <div class="location-indicator">
+                Nagelia Ancestral Home, Jamshedpur, Jharkhand
+              </div>
+            </div>
+            <div class="event-image">
+              <img src="banner.jpg" alt="Diwali Celebration">
+            </div>
+          </div>
+        </div>
+
+        <!-- Archived Events Section -->
+        <div class="archived-section">
+          <div class="archived-header">
+            <h3>Past Events</h3>
+          </div>
+
+          <div class="archived-events">
+            <div class="archive-card">
+              <img src="kalka_mata.jpg" alt="Holi Celebration 2024" class="archive-image">
+              <div class="archive-content">
+                <h4 class="archive-title">Holi Celebration</h4>
+                <span class="archive-date">March 15, 2024</span>
+                <p>Our colorful Holi celebration brought together family members of all ages for a day of joy and tradition.</p>
+                <a href="#" class="view-details">View Gallery</a>
+              </div>
+            </div>
+
+            <div class="archive-card">
+              <img src="ancient_temple.jpg" alt="Wedding Ceremony" class="archive-image">
+              <div class="archive-content">
+                <h4 class="archive-title">Rajan & Priya's Wedding</h4>
+                <span class="archive-date">December 5, 2024</span>
+                <p>The traditional wedding ceremony united two families in a celebration of love and heritage.</p>
+                <a href="#" class="view-details">View Gallery</a>
+              </div>
+            </div>
+
+            <div class="archive-card">
+              <img src="banner.jpg" alt="Annual Picnic" class="archive-image">
+              <div class="archive-content">
+                <h4 class="archive-title">Annual Family Picnic</h4>
+                <span class="archive-date">October 23, 2024</span>
+                <p>Our annual picnic at the scenic lakeside provided a wonderful opportunity for family bonding.</p>
+                <a href="#" class="view-details">View Gallery</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>
+          © 2025 Nagelia Family History | Preserving Our Heritage for Future
+          Generations
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Simple filtering functionality for events
+      document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        
+        filterButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Get filter value
+            const filter = this.getAttribute('data-filter');
+            
+            // Here you would implement the actual filtering logic
+            // This is just a placeholder to show the interaction
+            console.log(`Filtering events by: ${filter}`);
+            
+            // For a complete implementation, you would:
+            // 1. Tag each event card with data attributes (data-category)
+            // 2. Hide/show cards based on the selected filter
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
